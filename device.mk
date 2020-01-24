@@ -38,6 +38,12 @@ PRODUCT_PACKAGES += \
     libtinycompress \
     libvolumelistener
 
+# Pixel Charger
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    product_charger_res_images
+
+# Audio configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(LOCAL_PATH)/configs/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf \
