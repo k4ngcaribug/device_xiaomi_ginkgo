@@ -951,3 +951,7 @@ service zramswap /system/bin/swapon /dev/block/zram0
 on boot
     # Disable kernel logging for better performance
     write /proc/sys/kernel/printk "0 0 0 0"
+
+on property:persist.sys.device_provisioned=1
+    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,6,7
+    setprop dalvik.vm.dex2oat-threads 6
