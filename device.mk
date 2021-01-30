@@ -226,6 +226,7 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.target.rc \
     ueventd.oppo.rc \
+    init.safailnet.rc \
     ueventd.qcom.rc
 
 # IPv6
