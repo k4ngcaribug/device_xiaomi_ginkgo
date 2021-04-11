@@ -10,6 +10,9 @@ DEVICE_PATH := device/xiaomi/ginkgo
 # Assert
 TARGET_OTA_ASSERT_DEVICE := ginkgo,willow
 
+# Audio (Dolby)Add commentMore actions
+AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := true
+
 # Audio
 TARGET_PROVIDES_AUDIO_EXTNS := true
 
@@ -199,6 +202,7 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Treble
 BOARD_VNDK_VERSION := current
