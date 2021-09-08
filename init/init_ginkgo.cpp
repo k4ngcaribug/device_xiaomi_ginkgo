@@ -41,9 +41,6 @@ void vendor_load_properties()
 {
     string device, model;
 
-    string fp = "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys";
-    string desc = "walleye-user 8.1.0 OPM1.171019.011 4448085 release-keys";
-
     string region = GetProperty("ro.boot.hwc", "");
     string hwversion = GetProperty("ro.boot.hwversion", "");
 
@@ -64,8 +61,6 @@ void vendor_load_properties()
         property_override(string("ro.product.") + prop + string("device"), device);
         property_override(string("ro.product.") + prop + string("model"), model);
         property_override(string("ro.") + prop + string("build.product"), device);
-        property_override(string("ro.") + prop + string("build.fingerprint"), fp);
-        property_override(string("ro.") + prop + string("build.description"), desc);
     }
 
     // Set hardware SKU prop
