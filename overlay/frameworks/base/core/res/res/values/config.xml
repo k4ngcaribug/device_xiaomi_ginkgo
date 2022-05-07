@@ -935,4 +935,9 @@
     <string name="db_default_journal_mode">MEMORY</string>
     <string name="db_default_sync_mode">OFF</string>
     <string name="db_wal_sync_mode">OFF</string>
+
+    <!-- If true, the screen can be rotated via the accelerometer in all 4
+         rotations as the default behavior. -->
+    <bool name="config_allowAllRotations">true</bool>
+
 </resources>
