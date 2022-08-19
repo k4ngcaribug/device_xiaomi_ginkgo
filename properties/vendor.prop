@@ -143,6 +143,7 @@ ro.telephony.iwlan_operation_mode=legacy
 ro.vendor.use_data_netmgrd=true
 
 # Display
+debug.sf.disable_client_composition_cache=1
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
 debug.egl.hw=0
