@@ -51,6 +51,9 @@ persist.mm.enable.prefetch=true
 ro.media.recorder-max-base-layer-fps=60
 vendor.mm.enable.qcom_parser=63963135
 
+# System Server
+arm64.memtag.process.system_server=off
+
 # Netflix
 ro.netflix.bsp_rev=Q6125-17995-1
 
