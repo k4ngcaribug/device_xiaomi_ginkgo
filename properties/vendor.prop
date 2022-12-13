@@ -82,6 +82,7 @@ vendor.audio_hal.period_multiplier=3
 vendor.audio_hal.period_size=192
 vendor.audio.hal.boot.timeout.ms=20000
 vendor.voice.path.for.pcm.voip=true
+vendor.audio.gsl.shmem.dmaheap.uncached=true
 
 # Bluetooth
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
