@@ -323,3 +323,10 @@ on  property:vendor.camera.cpuperf.en=1
 	write /dev/stune/foreground/schedtune.prefer_idle 1
 on  property:vendor.camera.cpuperf.en=0
 	write /dev/stune/foreground/schedtune.prefer_idle 0
+
+on post-fs && property:ro.boot.product.hardware.sku=willow
+    mount none /vendor/firmware_mnt/image/bdf_c3x.bin /vendor/firmware_mnt/image/bdwlan.bin bind
+
+on property:sys.boot_completed=1
+   # Enable suspend to RAM
+    write /sys/power/mem_sleep "deep"
