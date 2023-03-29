@@ -373,7 +373,8 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.target.rc \
     init.ginkgo.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    fastcharge.sh
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/init/,$(TARGET_COPY_OUT_VENDOR)/etc/init)
