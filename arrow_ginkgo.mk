@@ -26,12 +26,12 @@ $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 # Signed
 -include vendor/lineage-priv/keys/keys.mk
 
-# Inherit some common DerpfestOS stuff
+# Inherit some common ArrowOS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 # Device identifier
-PRODUCT_NAME := derp_ginkgo
+PRODUCT_NAME := arrow_ginkgo
 PRODUCT_DEVICE := ginkgo
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 8/8T
