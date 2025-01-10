@@ -23,11 +23,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from ginkgo device
 $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 
-# Signed
--include vendor/lineage-priv/keys/keys.mk
-
 # Inherit some common ArrowOS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
+DEVICE_MAINTAINER := zed
+DEVICE_MAINTAINER_LINK := https://t.me/k4ngcaribug
 $(call inherit-product, vendor/arrow/config/common.mk)
 
 # Device identifier

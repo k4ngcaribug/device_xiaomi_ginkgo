@@ -1,5 +1,5 @@
 # Audio
-af.fast_track_multiplier=1
+af.fast_track_multiplier=2
 audio.deep_buffer.media=true
 audio.offload.min.duration.secs=30
 persist.bluetooth.a2dp_offload.disabled=false
@@ -144,10 +144,6 @@ vendor.camera.vidhance.eis.enabled=1
 vendor.camera.vidhanceEis.force=1
 vendor.vidhance.video.enabled=1
 
-# Crypto
-ro.crypto.allow_encrypt_override=true
-ro.crypto.volume.filenames_mode=aes-256-cts
-
 # Data
 persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
@@ -181,7 +177,7 @@ vendor.display.disable_excl_rect_partial_fb=1
 vendor.display.disable_hw_recovery_dump=1
 vendor.display.disable_inline_rotator=1
 vendor.display.disable_rotator_downscale=1
-vendor.display.disable_scaler=0
+vendor.display.disable_scaler=1
 vendor.display.disable_ui_3d_tonemap=1
 vendor.display.enable_default_color_mode=1
 vendor.display.enable_force_split=0
