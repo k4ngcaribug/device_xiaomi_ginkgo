@@ -20,7 +20,6 @@ LOCAL_OVERRIDES_PACKAGES := \
 	Jellyfish \
 	Jelly \
 	Maps \
-	Photos \
 	PixelThemesStub \
 	PixelThemesStub2022_and_newer \
 	PixelWallpapers2023 \
