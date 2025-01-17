@@ -32,14 +32,19 @@ persist.vendor.dpm.feature=11
 persist.vendor.dpmhalservice.enable=1
 
 # Display
-persist.lcd.cabc_mode=1
-persist.lcd.hbm_mode=0
+persist.lcd.cabc_mode=0
+persist.lcd.hbm_mode=3
 
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
 
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
+
+# Hardware Description
+ro.device.chipset=Qualcomm Snapdragon™665
+ro.device.display_resolution=6.3" IPS LCD 1080 x 2340 
+ro.device.colorbody_phone=Neptune Blue
 
 # IMS
 persist.vendor.ims.disableADBLogs=1
