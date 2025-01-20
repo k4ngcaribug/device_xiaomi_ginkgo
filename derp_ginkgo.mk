@@ -25,6 +25,7 @@ $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 
 # Inherit some common DerpfestOS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_NOT_USES_BLUR := true
 $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 # Device identifier
