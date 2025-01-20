@@ -23,12 +23,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from ginkgo device
 $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 
-# Inherit some common DerpfestOS stuff
+# Inherit some common Afterlife stuff
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
+
+# Afterlife Flags
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := false
 TARGET_BOOT_ANIMATION_RES := 1080
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+AFTERLIFE_GAPPS := true
+AFTERLIFE_CORE := true
+AFTERLIFE_MAINTAINER := AL
+USE_PIXEL_CHARGING := true
+TARGET_SUPPORTS_TOUCHGESTURES := true
+AFTERLIFE_EXTRA := true
+BUILD_GMAIL := true
+BUILD_GALLERYGO := true
 
 # Device identifier
-PRODUCT_NAME := derp_ginkgo
+PRODUCT_NAME := afterlife_ginkgo
 PRODUCT_DEVICE := ginkgo
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 8/8T
