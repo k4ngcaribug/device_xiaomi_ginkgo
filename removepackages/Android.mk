@@ -28,8 +28,6 @@ LOCAL_OVERRIDES_PACKAGES := \
 	SafetyHubPrebuilt \
         SimpleGallery \
 	TurboPrebuilt \
-	Velvet \
-	WellbeingPrebuilt \
 	YouTube
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := platform
