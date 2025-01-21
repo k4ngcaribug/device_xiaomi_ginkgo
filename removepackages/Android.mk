@@ -12,7 +12,6 @@ LOCAL_OVERRIDES_PACKAGES := \
 	AiWallpapers \
 	AndroidAutoStubPrebuilt \
 	Camera2 \
-        DevicePersonalizationPrebuiltPixel2020 \
         DuckDuckGo \
         Flash \
 	GoogleTTS \
