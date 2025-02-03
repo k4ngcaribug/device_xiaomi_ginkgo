@@ -83,7 +83,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml
 
 # Camera
-$(call inherit-product, vendor/miuicamera/config.mk)
+$(call inherit-product-if-exists, vendor/miuicamera/config.mk)
 
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
@@ -136,6 +136,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.level-1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-1.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml
 
+
+# Dolby
+$(call inherit-product-if-exists, vendor/dolby/ds/dolby-product.mk)
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -328,9 +331,6 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor \
     libqti_vndfwk_detect.vendor
 
-PRODUCT_ODM_PROPERTIES += \
-    ro.vendor.qti.va_odm.support=1
-
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -421,6 +421,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml
 
+# TextClassifier smart selection model files
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/textclassifier/actions_suggestions.universal.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/actions_suggestions.universal.model \
+    $(LOCAL_PATH)/textclassifier/textclassifier.en.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/textclassifier.en.model \
+    $(LOCAL_PATH)/textclassifier/lang_id.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/lang_id.model \
+    $(LOCAL_PATH)/textclassifier/textclassifier.universal.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/textclassifier.universal.model
+
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
@@ -471,3 +478,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
+
+# Extra flags
+# Inherit several Android Go Configurations(Beneficial for everyone, even on non-Go devices)
+PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
+PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
+# Speed profile services and wifi-service to reduce RAM and storage
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+# Signed
+-include vendor/extra/product.mk

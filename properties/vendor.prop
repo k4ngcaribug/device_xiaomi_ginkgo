@@ -81,21 +81,6 @@ vendor.audio.hal.boot.timeout.ms=20000
 vendor.voice.path.for.pcm.voip=true
 
 # Bluetooth
-bluetooth.device.class_of_device=90,2,12
-bluetooth.profile.a2dp.source.enabled=true
-bluetooth.profile.asha.central.enabled=true
-bluetooth.profile.avrcp.controller.enabled=true
-bluetooth.profile.avrcp.target.enabled=true
-bluetooth.profile.gatt.enabled=true
-bluetooth.profile.hfp.ag.enabled=true
-bluetooth.profile.hid.device.enabled=true
-bluetooth.profile.hid.host.enabled=true
-bluetooth.profile.map.server.enabled=true
-bluetooth.profile.opp.enabled=true
-bluetooth.profile.pan.nap.enabled=true
-bluetooth.profile.pan.panu.enabled=true
-bluetooth.profile.pbap.server.enabled=true
-bluetooth.profile.sap.server.enabled=true
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=false
 persist.vendor.bluetooth.modem_nv_support=true
@@ -144,10 +129,6 @@ vendor.camera.vidhance.eis.enabled=1
 vendor.camera.vidhanceEis.force=1
 vendor.vidhance.video.enabled=1
 
-# Crypto
-ro.crypto.allow_encrypt_override=true
-ro.crypto.volume.filenames_mode=aes-256-cts
-
 # Data
 persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
@@ -180,7 +161,7 @@ vendor.display.disable_excl_rect_partial_fb=1
 vendor.display.disable_hw_recovery_dump=1
 vendor.display.disable_inline_rotator=1
 vendor.display.disable_rotator_downscale=1
-vendor.display.disable_scaler=0
+vendor.display.disable_scaler=1
 vendor.display.disable_ui_3d_tonemap=1
 vendor.display.enable_default_color_mode=1
 vendor.display.enable_force_split=0
@@ -193,11 +174,11 @@ vendor.gralloc.disable_ubwc=0
 # DRM
 drm.service.enabled=true
 
-# FS-verity
-ro.apk_verity.mode=2
-
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
+# Fwk detect
+ro.vendor.qti.va_aosp.support=1
 
 # Incremental FS
 ro.incremental.enable=1
@@ -255,8 +236,8 @@ ro.surface_flinger.protected_contents=true
 ro.surface_flinger.use_color_management=1
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.set_display_power_timer_ms=10000
-ro.surface_flinger.set_touch_timer_ms=200
-ro.surface_flinger.set_idle_timer_ms=1000
+ro.surface_flinger.set_touch_timer_ms=100
+ro.surface_flinger.set_idle_timer_ms=58
 ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # Time
