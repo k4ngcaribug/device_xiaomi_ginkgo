@@ -9,5 +9,10 @@ allow init adsprpcd_file:file mounton;
 
 get_prop(vendor_init, oppo_fingerprint_prop)
 
+set_prop(vendor_init, cnd_prop)
+set_prop(vendor_init, ims_prop)
+set_prop(vendor_init, vendor_iop_prop)
+set_prop(vendor_init, vendor_scroll_prop)
+set_prop(vendor_init, vendor_wlc_prop)
 set_prop(vendor_init, freq_prop)
 set_prop(vendor_init, vendor_camera_prop)
