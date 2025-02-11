@@ -38,4 +38,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     <!-- the padding on the end of the statusbar -->
     <dimen name="status_bar_padding_start">14.0dip</dimen>
+
+    <!-- Nav bar button default ordering/layout -->
+    <string name="config_navBarLayout" translatable="false">left[.5W],recent[1WC];home;back[1WC],right[.5W]</string>
 </resources>
