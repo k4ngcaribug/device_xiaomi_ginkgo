@@ -15,6 +15,11 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="maintainer_name">Andra Ramadan</string>
+    <string name="maintainer_name">Neophyte</string>
+    <string name="xd_device_name_summary">Redmi Note 8</string>
+    <string name="xd_chipset_type_summary">Qualcomm Snapdragon™ 665</string>
+    <string name="xd_gpu_summary">Adreno 610</string>
+    <string name="xd_camera_mp_summary">48 MP, f/1.8, (wide), PDAF </string>
+    <string name="xd_screen_type_summary">IPS LCD FHD 6.3" Screen</string>
 
 </resources>
