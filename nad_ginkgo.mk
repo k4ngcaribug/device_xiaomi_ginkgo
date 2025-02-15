@@ -25,10 +25,10 @@ $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 # Inherit some common ArrowOS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 USE_PIXEL_CHARGING := true
-$(call inherit-product, vendor/qassa/config/common_full_phone.mk)
+$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
 
 # Device identifier
-PRODUCT_NAME := qassa_ginkgo
+PRODUCT_NAME := nad_ginkgo
 PRODUCT_DEVICE := ginkgo
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 8
