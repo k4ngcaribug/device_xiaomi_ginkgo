@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_realme_trinket.mk
+    $(LOCAL_DIR)/qassa_realme_trinket.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_realme_trinket-user \
-    lineage_realme_trinket-userdebug \
-    lineage_realme_trinket-eng
+    qassa_realme_trinket-user \
+    qassa_realme_trinket-userdebug \
+    qassa_realme_trinket-eng

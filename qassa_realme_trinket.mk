@@ -20,7 +20,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/qassa/config/common_full_phone.mk)
+
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_FACE_UNLOCK_SUPPORTED := true
+WITH_GAPPS := false
+USE_PIXEL_CHARGING := true
 
 # Inherit from realme_trinket device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -29,7 +35,7 @@ BOARD_VENDOR := realme
 PRODUCT_BRAND := Realme
 PRODUCT_DEVICE := realme_trinket
 PRODUCT_MANUFACTURER := Realme
-PRODUCT_NAME := lineage_realme_trinket
+PRODUCT_NAME := qassa_realme_trinket
 PRODUCT_MODEL := Realme Trinket Series
 
 PRODUCT_GMS_CLIENTID_BASE := android-realme
@@ -40,6 +46,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 	PRIVATE_BUILD_DESC="unknown-user 10 QKQ1.200209.002 unknown release-keys"
 
 BUILD_FINGERPRINT := realme/RMX1911/RMX1911:10/QKQ1.200209.002/1642670490:user/release-keys
-
-# Time
-LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
