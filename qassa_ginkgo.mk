@@ -25,6 +25,7 @@ $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 # Inherit some common ArrowOS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 USE_PIXEL_CHARGING := true
+TARGET_GAPPS_ARCH := arm64
 $(call inherit-product, vendor/qassa/config/common_full_phone.mk)
 
 # Device identifier
