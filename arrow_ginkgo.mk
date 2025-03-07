@@ -36,3 +36,7 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 8/8T
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Build
+BUILD_USERNAME=neophyte
+BUILD_HOSTNAME=neophyte_server
