@@ -338,6 +338,9 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(DEVICE_PATH)/overlay-lineage/packages/apps/Snap \
     $(DEVICE_PATH)/overlay-system
 
+PRODUCT_PACKAGES += \
+     NoCutoutOverlay
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service-qti
