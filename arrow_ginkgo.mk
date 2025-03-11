@@ -29,6 +29,14 @@ DEVICE_MAINTAINER := neophyte
 DEVICE_MAINTAINER_LINK := https://t.me/k4ngcaribug
 $(call inherit-product, vendor/arrow/config/common.mk)
 
+# Gapps
+ARROW_GAPPS := true
+GAPPS_CORE := true
+GAPPS_EXTRA := true
+BUILD_GALLERYGO := true
+BUILD_GMAIL := true
+BUILD_GOOLAG := true
+
 # Device identifier
 PRODUCT_NAME := arrow_ginkgo
 PRODUCT_DEVICE := ginkgo
