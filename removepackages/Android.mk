@@ -7,7 +7,6 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
 	AudioFX \
 	Aperture \
-	arcore \
 	AICorePrebuilt \
 	AiWallpapers \
 	AndroidAutoStubPrebuilt \
@@ -26,6 +25,7 @@ LOCAL_OVERRIDES_PACKAGES := \
 	SnapCamera \
 	SafetyHubPrebuilt \
         SimpleGallery \
+	Velvet \
 	TurboPrebuilt \
 	YouTube
 LOCAL_UNINSTALLABLE_MODULE := true
