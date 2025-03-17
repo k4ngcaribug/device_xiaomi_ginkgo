@@ -27,10 +27,11 @@ $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 DEVICE_MAINTAINER := neophyte
 DEVICE_MAINTAINER_LINK := https://t.me/k4ngcaribug
-$(call inherit-product, vendor/arrow/config/common.mk)
+TARGET_INCLUDE_PIXEL_CHARGER := true
+$(call inherit-product, vendor/superior/config/common.mk)
 
 # Device identifier
-PRODUCT_NAME := arrow_ginkgo
+PRODUCT_NAME := superior_ginkgo
 PRODUCT_DEVICE := ginkgo
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 8/8T
