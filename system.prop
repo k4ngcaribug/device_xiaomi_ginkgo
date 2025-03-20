@@ -16,6 +16,9 @@ persist.vendor.cne.feature=1
 persist.vendor.dpm.feature=1
 persist.vendor.dpm.nsrm.bkg.evt=3955
 
+# Crypto
+ro.crypto.state=encrypted
+
 # Fwk detect
 ro.vendor.qti.va_odm.support=1
 
