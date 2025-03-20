@@ -28,6 +28,9 @@ debug.cpurend.vsync=false
 persist.hwc.enable_vds=1
 persist.demo.hdmirotationlock=false
 
+# Crypto
+ro.crypto.state=encrypted
+
 # Fwk detect
 ro.vendor.qti.va_odm.support=1
 
