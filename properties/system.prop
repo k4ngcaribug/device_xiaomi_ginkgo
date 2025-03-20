@@ -20,6 +20,9 @@ persist.sys.camera.fallback_id_2=20
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
 
+# Crypto
+ro.crypto.state=encrypted
+
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
 
