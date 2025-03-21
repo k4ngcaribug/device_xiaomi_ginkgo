@@ -1,4 +1,6 @@
 allow vendor_init proc_sched:file write;
+allow vendor_init proc_drop_caches:file rw_file_perms;
+allow vendor_init proc_dirty:file rw_file_perms;
 
 set_prop(vendor_init, vendor_camera_prop)
 set_prop(vendor_init, vendor_video_prop)
