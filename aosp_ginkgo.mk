@@ -25,10 +25,7 @@ $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 
 # Inherit some common ArrowOS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
-DEVICE_MAINTAINER := neophyte
-DEVICE_MAINTAINER_LINK := https://t.me/k4ngcaribug
-TARGET_INCLUDE_PIXEL_CHARGER := true
-$(call inherit-product, vendor/superior/config/common.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Device identifier
 PRODUCT_NAME := superior_ginkgo
