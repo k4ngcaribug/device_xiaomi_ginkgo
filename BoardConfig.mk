@@ -30,12 +30,6 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a73
 
-# ART
-ART_BUILD_TARGET_NDEBUG := true
-ART_BUILD_TARGET_DEBUG := false
-ART_BUILD_HOST_NDEBUG := true
-ART_BUILD_HOST_DEBUG := false
-
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
@@ -120,7 +114,6 @@ TARGET_KERNEL_CONFIG := vendor/ginkgo-perf_defconfig
 
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := aosp
-TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-aosp
 TARGET_KERNEL_ADDITIONAL_FLAGS := AR=llvm-ar AS=llvm-as NM=llvm-nm LD=ld.lld OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump OBJSIZE=llvm-size READELF=llvm-readelf STRIP=llvm-strip HOSTAR=llvm-ar HOSTAS=llvm-as HOSTNM=llvm-nm HOSTLD=ld.lld HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
 # Partitions
