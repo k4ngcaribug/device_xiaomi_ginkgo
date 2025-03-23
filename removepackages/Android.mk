@@ -11,13 +11,14 @@ LOCAL_OVERRIDES_PACKAGES := \
 	AiWallpapers \
 	AndroidAutoStubPrebuilt \
 	Camera2 \
+	DevicePersonalizationPrebuiltPixel2020 \
         DuckDuckGo \
         Flash \
 	GoogleTTS \
 	Gallery2 \
 	Jellyfish \
 	Jelly \
-	Maps \
+	Photos \
 	PixelThemesStub \
 	PixelThemesStub2022_and_newer \
 	PixelWallpapers2023 \
@@ -27,6 +28,7 @@ LOCAL_OVERRIDES_PACKAGES := \
         SimpleGallery \
 	Velvet \
 	TurboPrebuilt \
+	WellbeingPrebuilt \
 	YouTube
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := platform
