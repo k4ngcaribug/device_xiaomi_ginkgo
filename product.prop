@@ -1,10 +1,6 @@
 # ART
 ro.sys.fw.dex2oat_thread_count=8
 
-# Audio
-audio.sys.noisy.broadcast.delay=600
-audio.sys.offload.pstimeout.secs=3
-
 # Bluetooth
 persist.bluetooth.bqr.event_mask=14
 persist.bluetooth.bqr.min_interval_ms=500
