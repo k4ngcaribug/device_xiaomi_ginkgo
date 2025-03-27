@@ -101,6 +101,10 @@ PRODUCT_PACKAGES += \
     com.quicinc.cne \
     services-ext
 
+# Dex2oat
+PRODUCT_PRODUCT_PROPERTIES += \
+   dalvik.vm.dex2oat64.enabled=true
+
 # Display/Graphics
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
