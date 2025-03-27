@@ -16,7 +16,7 @@ if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
 ARROW_ROOT="${MY_DIR}"/../../..
 
-HELPER="${ARROW_ROOT}/vendor/arrow/build/tools/extract_utils.sh"
+HELPER="${ANDROID_ROOT}/vendor/qassa/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -65,11 +65,11 @@ function blob_fixup() {
 }
 
 # Initialize the helper
-setup_vendor "${DEVICE}" "${VENDOR}" "${ARROW_ROOT}" true "${CLEAN_VENDOR}"
+setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
 
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
         "${KANG}" --section "${SECTION}"
 
-BLOB_ROOT="${ARROW_ROOT}/vendor/${VENDOR}/${DEVICE}/proprietary"
+BLOB_ROOT="${ANDROID_ROOT}/vendor/${VENDOR}/${DEVICE}/proprietary"
 
 "${MY_DIR}/setup-makefiles.sh"
