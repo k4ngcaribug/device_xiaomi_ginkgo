@@ -28,10 +28,6 @@ persist.vendor.ims.disableDebugLogs=1
 persist.vendor.ims.disableIMSLogs=1
 persist.vendor.ims.disableQXDMLogs=1
 
-# LMKD
-ro.lmk.use_psi=true
-ro.lmk.use_minfree_levels=false
-
 # Media
 debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank.sw-audio=1
