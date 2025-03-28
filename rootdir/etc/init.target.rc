@@ -329,3 +329,8 @@ on post-fs && property:ro.boot.product.hardware.sku=willow
 on property:sys.boot_completed=1
    # Enable suspend to RAM
     write /sys/power/mem_sleep "deep"
+
+on property:sys.boot_completed=1
+   # Set Sound Control parameters after boot
+   write /sys/kernel/sound_control/mic_gain 6
+   write /sys/kernel/sound_control/speaker_gain 6
