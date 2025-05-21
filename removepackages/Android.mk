@@ -7,10 +7,12 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
 	AudioFX \
 	Aperture \
+	arcore \
 	AICorePrebuilt \
 	AiWallpapers \
 	AndroidAutoStubPrebuilt \
 	Camera2 \
+        DevicePersonalizationPrebuiltPixel2020 \
         DuckDuckGo \
         Flash \
 	GoogleTTS \
@@ -18,6 +20,7 @@ LOCAL_OVERRIDES_PACKAGES := \
 	Jellyfish \
 	Jelly \
 	Maps \
+	Photos \
 	PixelThemesStub \
 	PixelThemesStub2022_and_newer \
 	PixelWallpapers2023 \
@@ -25,8 +28,9 @@ LOCAL_OVERRIDES_PACKAGES := \
 	SnapCamera \
 	SafetyHubPrebuilt \
         SimpleGallery \
-	Velvet \
 	TurboPrebuilt \
+	Velvet \
+	WellbeingPrebuilt \
 	YouTube
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := platform
