@@ -30,10 +30,6 @@ on boot
     # Thermal Profile
     write /sys/class/thermal/thermal_message/sconfig 0
 
-    # USB Fastcharge
-    chown system system /sys/kernel/fast_charge/force_fast_charge
-    chmod 0660 /sys/kernel/fast_charge/force_fast_charge
-
     # Vibration
     chown system system /sys/class/leds/vibrator/vtg_level
     chmod 0660 /sys/class/leds/vibrator/vtg_level	
