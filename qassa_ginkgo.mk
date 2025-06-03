@@ -35,3 +35,9 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 8
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="xiaomi/ginkgo/ginkgo:10/QKQ1.200114.002/V12.0.6.0.QCOMIXM:user/release-keys"
+
+# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
+BUILD_FINGERPRINT := "xiaomi/ginkgo/ginkgo:10/QKQ1.200114.002/V12.0.6.0.QCOMIXM:user/release-keys"
