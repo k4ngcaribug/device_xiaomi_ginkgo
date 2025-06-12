@@ -23,10 +23,6 @@ vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
 # Crypto
 ro.crypto.state=encrypted
 
-# Display
-persist.lcd.cabc_mode=1
-persist.lcd.hbm_mode=0
-
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
 
