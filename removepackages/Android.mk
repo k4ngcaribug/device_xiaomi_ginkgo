@@ -29,6 +29,7 @@ LOCAL_OVERRIDES_PACKAGES := \
 	SafetyHubPrebuilt \
         SimpleGallery \
 	TurboPrebuilt \
+	ViaBrowser \
 	Velvet \
 	WellbeingPrebuilt \
 	YouTube

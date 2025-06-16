@@ -6,4 +6,5 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/derp_ginkgo.mk \
-    $(LOCAL_DIR)/superior_ginkgo.mk
+    $(LOCAL_DIR)/superior_ginkgo.mk \
+    $(LOCAL_DIR)/lineage_ginkgo.mk

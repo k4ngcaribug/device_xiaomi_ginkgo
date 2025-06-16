@@ -134,9 +134,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml
 
 
-# Dolby
-$(call inherit-product-if-exists, vendor/dolby/ds/dolby-product.mk)
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
