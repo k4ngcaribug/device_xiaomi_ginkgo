@@ -22,16 +22,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from ginkgo device
 $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 
-# Inherit some common ArrowOS stuff
-NAD_BUILD_TYPE := OFFICIAL
+# Inherit some common QASSA stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 USE_PIXEL_CHARGING := true
-$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
+TARGET_GAPPS_ARCH := arm64
+$(call inherit-product, vendor/qassa/config/common_full_phone.mk)
 
 # Device identifier
-PRODUCT_NAME := nad_ginkgo
+PRODUCT_NAME := qassa_ginkgo
 PRODUCT_DEVICE := ginkgo
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 8
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="xiaomi/ginkgo/ginkgo:10/QKQ1.200114.002/V12.0.6.0.QCOMIXM:user/release-keys"
+
+# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
+BUILD_FINGERPRINT := "xiaomi/ginkgo/ginkgo:10/QKQ1.200114.002/V12.0.6.0.QCOMIXM:user/release-keys"
