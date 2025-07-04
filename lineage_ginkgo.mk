@@ -39,3 +39,11 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 # Build
 BUILD_USERNAME=neophyte
 BUILD_HOSTNAME=neophyte_server
+
+
+# Parts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/parts/init.xiaomiparts.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.xiaomiparts.rc
