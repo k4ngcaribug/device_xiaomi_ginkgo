@@ -41,9 +41,3 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 # Build
 BUILD_USERNAME=neophyte
 BUILD_HOSTNAME=neophyte_server
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="ginkgo-user 11 RKQ1.201004.002 V12.5.2.0.RCOMIXM release-keys"
-
-# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := "xiaomi/ginkgo/ginkgo:11/RKQ1.201004.002/V12.5.2.0.RCOMIXM:user/release-keys"
