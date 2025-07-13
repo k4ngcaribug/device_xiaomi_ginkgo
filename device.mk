@@ -360,6 +360,7 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    fstab.zram \
     fstab.qcom \
     init.class_main.sh \
     init.msm.usb.configfs.rc \
