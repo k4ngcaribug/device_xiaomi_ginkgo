@@ -24,8 +24,7 @@ LOCAL_SRC_FILES += \
     location_gnss.cpp \
     GnssAdapter.cpp \
     Agps.cpp \
-    XtraSystemStatusObserver.cpp \
-    NativeAgpsHandler.cpp
+    XtraSystemStatusObserver.cpp
 
 LOCAL_CFLAGS += \
      -fno-short-enums \

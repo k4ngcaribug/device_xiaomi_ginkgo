@@ -142,8 +142,7 @@ struct Gnss : public IGnss {
 
     // Callback for ODCPI request
     void odcpiRequestCb(const OdcpiRequestInfo& request);
-    void updateCallbacksIfGnssStatusCbReg(GnssAPIClient* api);
-    void notifyGnssStatus();
+    void updateCallbacksByAccuracy(uint32_t preferredAccuracyMeters, GnssAPIClient* api);
  private:
     struct GnssDeathRecipient : hidl_death_recipient {
         GnssDeathRecipient(sp<Gnss> gnss) : mGnss(gnss) {
@@ -171,14 +170,14 @@ struct Gnss : public IGnss {
     sp<V2_0::IGnssCallback> mGnssCbIface_2_0 = nullptr;
     sp<IMeasurementCorrections> mGnssMeasCorr = nullptr;
     sp<IGnssVisibilityControl> mVisibCtrl = nullptr;
+
     GnssAPIClient* mApi = nullptr;
     GnssConfig mPendingConfig;
     const GnssInterface* mGnssInterface = nullptr;
+    bool mIsGnssClient;
 };
 
-typedef std::function<void(bool)> gnssStatusCb;
 extern "C" V1_0::IGnss* HIDL_FETCH_IGnss(const char* name);
-extern "C" void registerGnssStatusCallback(gnssStatusCb in);
 
 }  // namespace implementation
 }  // namespace V2_0

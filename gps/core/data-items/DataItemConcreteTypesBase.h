@@ -284,7 +284,7 @@ class NetworkInfoDataItemBase : public IDataItemCore {
 public:
     NetworkInfoDataItemBase(
     NetworkType initialType, int32_t type, string typeName, string subTypeName,
-    bool available, bool connected, bool roaming, uint64_t networkHandle, string apn):
+    bool available, bool connected, bool roaming, uint64_t networkHandle ):
             mAllTypes(typeToAllTypes(initialType)),
             mType(type),
             mTypeName(typeName),
@@ -293,7 +293,7 @@ public:
             mConnected(connected),
             mRoaming(roaming),
             mNetworkHandle(networkHandle),
-            mId(NETWORKINFO_DATA_ITEM_ID), mApn(apn) {
+            mId(NETWORKINFO_DATA_ITEM_ID) {
                 mAllNetworkHandles[0].networkHandle = networkHandle;
                 mAllNetworkHandles[0].networkType = initialType;
             }
@@ -318,7 +318,6 @@ public:
     bool mRoaming;
     NetworkInfoType mAllNetworkHandles[MAX_NETWORK_HANDLES];
     uint64_t mNetworkHandle;
-    string mApn;
 protected:
     DataItemId mId;
     inline uint64_t typeToAllTypes(NetworkType type) {

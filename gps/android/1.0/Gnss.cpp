@@ -70,7 +70,7 @@ Gnss::Gnss() {
 Gnss::~Gnss() {
     ENTRY_LOG_CALLFLOW();
     if (mApi != nullptr) {
-        mApi->destroy();
+        delete mApi;
         mApi = nullptr;
     }
     sGnss = nullptr;
@@ -89,6 +89,9 @@ GnssAPIClient* Gnss::getApi() {
             mApi->gnssConfigurationUpdate(mPendingConfig);
             // clear size to invalid mPendingConfig
             mPendingConfig.size = 0;
+            if (mPendingConfig.assistanceServer.hostName != nullptr) {
+                free((void*)mPendingConfig.assistanceServer.hostName);
+            }
         }
     }
     if (mApi == nullptr) {
@@ -165,9 +168,9 @@ Return<bool> Gnss::updateConfiguration(GnssConfig& gnssConfig) {
             mPendingConfig.assistanceServer.type = gnssConfig.assistanceServer.type;
             if (mPendingConfig.assistanceServer.hostName != nullptr) {
                 free((void*)mPendingConfig.assistanceServer.hostName);
+                mPendingConfig.assistanceServer.hostName =
+                    strdup(gnssConfig.assistanceServer.hostName);
             }
-            mPendingConfig.assistanceServer.hostName =
-                strdup(gnssConfig.assistanceServer.hostName);
             mPendingConfig.assistanceServer.port = gnssConfig.assistanceServer.port;
         }
         if (gnssConfig.flags & GNSS_CONFIG_FLAGS_LPP_PROFILE_VALID_BIT) {
@@ -251,11 +254,6 @@ Return<bool> Gnss::injectLocation(double latitudeDegrees,
 
 Return<bool> Gnss::injectTime(int64_t timeMs, int64_t timeReferenceMs,
                               int32_t uncertaintyMs) {
-    ENTRY_LOG_CALLFLOW();
-    const GnssInterface* gnssInterface = getGnssInterface();
-    if ((nullptr != gnssInterface) && (gnssInterface->isSS5HWEnabled())) {
-        gnssInterface->injectTime(timeMs, timeReferenceMs, uncertaintyMs);
-    }
     return true;
 }
 
