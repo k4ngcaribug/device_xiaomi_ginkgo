@@ -4,9 +4,6 @@ iorapd.perfetto.enable=false
 iorapd.readahead.enable=false
 persist.device_config.runtime_native_boot.iorap_readahead_enable=false
 
-# ART
-ro.sys.fw.dex2oat_thread_count=8
-
 # Audio
 audio.sys.noisy.broadcast.delay=600
 audio.sys.offload.pstimeout.secs=3
