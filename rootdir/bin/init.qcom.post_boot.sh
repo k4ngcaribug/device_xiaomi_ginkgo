@@ -3029,7 +3029,7 @@ case "$target" in
             echo 1401600 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
             echo 1056000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 
-	    echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
+	    echo 0 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
             # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
             echo -6 >  /sys/devices/system/cpu/cpu0/sched_load_boost
