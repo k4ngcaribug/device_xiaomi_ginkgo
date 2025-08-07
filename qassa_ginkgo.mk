@@ -23,6 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 
 # Inherit some common QASSA stuff
+QASSA_BUILD_TYPE := OFFICIAL
 TARGET_BOOT_ANIMATION_RES := 1080
 USE_PIXEL_CHARGING := true
 TARGET_GAPPS_ARCH := arm64
